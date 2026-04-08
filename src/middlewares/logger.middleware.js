@@ -1,7 +1,7 @@
 const logger = (req, res, next) => {
   const timestamp = new Date().toISOString();
-  console.log(`${timestamp} ${req.method} ${req.url}`);
-  next();
+  console.log(`[BIBLIOTECA] ${timestamp} | ${req.method} ${req.url}`);
+  next(); // ← OBRIGATÓRIO: passa para o próximo posto
 };
 
 module.exports = logger;
